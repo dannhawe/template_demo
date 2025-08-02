@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>*|MC:SUBJECT|*</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Anton:wght@400&display=swap"
+        rel="stylesheet">
+
+    <style type="text/css">
+        /* Reset styles */
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+            border: 0;
+            height: auto;
+            outline: none;
+            text-decoration: none;
+            max-width: 100%;
+        }
+
+        table,
+        td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+            border-collapse: collapse;
+        }
+
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            background: #f4f4f4;
+            font-family: 'DM Sans', Arial, sans-serif;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        p,
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Container styles */
+        .email-container {
+            max-width: 660px;
+            margin: 0 auto;
+            background: #ffffff;
+        }
+
+        .content-wrapper {
+            padding: 0 30px;
+        }
+
+        /* Header styles */
+        .header-banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Greeting section */
+        .greeting-section {
+            padding: 30px 0;
+        }
+
+        .greeting-text {
+            font-size: 14px;
+            color: #333333;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        /* Icon menu */
+        .icon-menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .icon-item {
+            flex: 1;
+            text-align: center;
+            padding: 0 10px;
+            border-right: 1px solid #ccc;
+        }
+
+        .icon-item:last-child {
+            border-right: none;
+        }
+
+        .icon-item img {
+            width: 40px;
+            height: auto;
+            margin-bottom: 8px;
+        }
+
+        .icon-item p {
+            font-family: 'Lucida', Arial, sans-serif;
+            font-weight: bold;
+            color: #333333;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* Section titles */
+        .section-title {
+            background-color: #e87722;
+            padding: 15px 0;
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .section-title h2 {
+            color: #ffffff;
+            font-family: 'Anton', sans-serif;
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        /* Article styles - FIXED */
+        .article-section {
+            padding: 20px 0;
+        }
+
+        .article {
+            display: flex;
+            margin-bottom: 30px;
+            gap: 20px;
+            align-items: stretch;
+            /* Changed from flex-start to stretch */
+            min-height: 180px;
+            /* Set minimum height */
+        }
+
+        .article-image {
+            flex: 0 0 45%;
+            height: auto;
+            /* Remove fixed height */
+        }
+
+        .article-image img {
+            width: 100%;
+            height: 100%;
+            /* Fill the container */
+            object-fit: cover;
+            border-radius: 4px;
+            min-height: 180px;
+            /* Ensure minimum height */
+        }
+
+        .article-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* Distribute content evenly */
+            padding: 5px 0;
+            /* Add small padding */
+        }
+
+        .article-title {
+            font-family: 'Anton', sans-serif;
+            font-size: 20px;
+            font-weight: normal;
+            color: #333;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .article-text {
+            font-size: 14px;
+            color: #333;
+            line-height: 1.5;
+            text-align: justify;
+            flex: 1;
+            /* Take available space */
+            margin-bottom: 15px;
+        }
+
+        .article-link {
+            font-family: 'Anton', sans-serif;
+            font-size: 14px;
+            color: #333333;
+            text-decoration: none;
+            border-bottom: 1px solid #999999;
+            padding: 4px 0;
+            display: inline-block;
+            align-self: flex-start;
+            /* Align to start */
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #063532;
+            color: #ffffff;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-bottom: 20px;
+        }
+
+        .footer-link {
+            color: #ffffff;
+            font-family: 'Anton', sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+        .footer-logo {
+            margin: 20px 0;
+        }
+
+        .footer-logo img {
+            width: 160px;
+            height: auto;
+        }
+
+        .footer-address {
+            font-size: 12px;
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .social-links img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .footer-legal {
+            font-size: 12px;
+            font-style: italic;
+            line-height: 1.4;
+            color: #cccccc;
+        }
+
+        /* Mobile responsive - UPDATED */
+        @media only screen and (max-width: 600px) {
+            .content-wrapper {
+                padding: 0 15px;
+            }
+
+            .icon-menu {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .icon-item {
+                border-right: none;
+                border-bottom: 1px solid #ccc;
+                padding: 10px 0;
+                width: 100%;
+            }
+
+            .icon-item:last-child {
+                border-bottom: none;
+            }
+
+            .article {
+                flex-direction: column;
+                gap: 15px;
+                min-height: auto;
+            }
+
+            .article-image {
+                flex: none;
+                width: 100%;
+            }
+
+            .article-image img {
+                height: 150px;
+                min-height: 150px;
+            }
+
+            .article-content {
+                height: auto;
+                padding: 0;
+            }
+
+            .article-title {
+                font-size: 18px;
+            }
+
+            .article-text {
+                font-size: 13px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .social-links {
+                gap: 15px;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .article {
+                flex-direction: row;
+                gap: 10px;
+                min-height: 140px;
+            }
+
+            .article-image {
+                flex: 0 0 35%;
+            }
+
+            .article-image img {
+                height: 100%;
+                min-height: 140px;
+            }
+
+            .article-content {
+                flex: 1;
+                padding: 2px 0;
+            }
+
+            .article-title {
+                font-size: 14px;
+                line-height: 1.3;
+                margin-bottom: 5px;
+            }
+
+            .article-text {
+                font-size: 12px;
+                line-height: 1.4;
+                margin-bottom: 8px;
+            }
+
+            .article-link {
+                font-size: 12px;
+            }
+
+            .section-title h2 {
+                font-size: 16px;
+            }
+
+            .greeting-text {
+                font-size: 13px;
+            }
+
+            .icon-item p {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Preheader text -->
+    <div style="display: none; max-height: 0px; overflow: hidden;">
+        Coffee market updates, Vietnam stocks statistics, and latest news from Tuan Loc Commodities
+    </div>
+
+    <div class="email-container">
+        <!-- Header Banner -->
+        <div class="header-banner">
+            <img src="https://mcusercontent.com/9e42e1e322845669432401150/images/1770c1b9-3a2d-b140-cd93-959eec397177.png"
+                alt="Tuan Loc Commodities Banner">
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Greeting Section -->
+            <div class="greeting-section">
+                <p class="greeting-text">
+                    Dear our coffee friends,<br><br>
+                    Please find below our Market Update, Local News, Offerlist and Vietnam Coffee Stocks Statistics from
+                    Vietnam.
+                </p>
+
+                <!-- Icon Menu -->
+                <div class="icon-menu">
+                    <div class="icon-item">
+                        <a href="https://tlcommodities.com/category/weekly-reports/" target="_blank">
+                            <img src="https://mcusercontent.com/9e42e1e322845669432401150/_thumbs/a9cc6e0a-085a-d508-e82e-a729feba5a09.png"
+                                alt="Coffee Update">
+                            <p>Coffee Update & Offers</p>
+                        </a>
+                    </div>
+                    <div class="icon-item">
+                        <a href="https://tlcommodities.com/category/monthly-visible-stocks/" target="_blank">
+                            <img src="https://mcusercontent.com/9e42e1e322845669432401150/_thumbs/df211e49-41a2-2676-e85b-dbda49ca321d.png"
+                                alt="Coffee Stocks">
+                            <p>Vietnam Coffee Stocks Statistics</p>
+                        </a>
+                    </div>
+                    <div class="icon-item">
+                        <a href="https://tlcommodities.com/category/sustainability/" target="_blank">
+                            <img src="https://mcusercontent.com/9e42e1e322845669432401150/_thumbs/3c114389-0c39-a1c7-5e60-17bd38efa13f.png"
+                                alt="Latest Articles">
+                            <p>Our Latest Articles</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Market News Section -->
+            <div class="section-title">
+                <h2>Market News Update</h2>
+            </div>
+
+            <div class="article-section">
+                <!-- Article 1 -->
+                <div class="article">
+                    <div class="article-image">
+                        <img src="https://mcusercontent.com/9e42e1e322845669432401150/_thumbs/da31d299-076f-2d14-9d7c-628a5994f8a8.png"
+                            alt="Coffee Update">
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Coffee Update & Offers</h3>
+                        <p class="article-text">
+                            Vietnam's coffee harvest is progressing well, with minimal rain (10 mm) expected over the
+                            next two weeks, supporting favorable picking conditions. With farmers targeting 100,000
+                            VND/kg...
+                        </p>
+                        <a href="https://tlcommodities.com/coffee-weekly-insights-w2-november-2024-2-2-2/"
+                            target="_blank" class="article-link">Read Full Report</a>
+                    </div>
+                </div>
+
+                <!-- Article 2 -->
+                <div class="article">
+                    <div class="article-image">
+                        <img src="https://mcusercontent.com/9e42e1e322845669432401150/_thumbs/e6177c5b-e194-c1f0-9e57-bd7b3bb29f1a.png"
+                            alt="Vietnamese Coffee Beans">
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Vietnamese Coffee Beans</h3>
+                        <p class="article-text">
+                            Only a few of the more than 100 different species of coffee that can be found around the
+                            world are actually suitable for consumption. Arabica and Robusta are the two of them, they
+                            are...
+                        </p>
+                        <a href="https://tlcommodities.com/vietnamese-coffee-locating-arabica-coffee/" target="_blank"
+                            class="article-link">Read Full Report</a>
+                    </div>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="article">
+                    <div class="article-image">
+                        <img src="https://mcusercontent.com/9e42e1e322845669432401150/_thumbs/2deaffcf-95e1-6d2a-66fc-6a18af04727d.png"
+                            alt="Vietnam Coffee Visible Stock">
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Vietnam Coffee Visible Stock</h3>
+                        <p class="article-text">
+                            Vietnam's coffee stocks at the end of Aug 2024 were 119,136 tons, which was a 25.72%
+                            decrease from the previous month and a 29.27% decrease from the same period last year.
+                        </p>
+                        <a href="https://tlcommodities.com/vietnam-coffee-visible-stocks-sep-2024-2/" target="_blank"
+                            class="article-link">Read Full Report</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tuan Loc Commodities News Section -->
+            <div class="section-title">
+                <h2>Tuan Loc Commodities News</h2>
+            </div>
+
+            <div class="article-section">
+                <!-- Article 1 -->
+                <div class="article">
+                    <div class="article-image">
+                        <img src="https://mcusercontent.com/9e42e1e322845669432401150/_thumbs/a0f57bdf-b556-a5cc-916c-4ec4ac667303.png"
+                            alt="Coffee Update">
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Coffee Update & Offers</h3>
+                        <p class="article-text">
+                            Vietnam's coffee harvest is progressing well, with minimal rain (10 mm) expected over the
+                            next two weeks, supporting favorable picking conditions. With farmers targeting 100,000
+                            VND/kg...
+                        </p>
+                        <a href="https://tlcommodities.com/vietnamese-coffee-locating-arabica-coffee/" target="_blank"
+                            class="article-link">Read Full Report</a>
+                    </div>
+                </div>
+
+                <!-- Article 2 -->
+                <div class="article">
+                    <div class="article-image">
+                        <img src="https://mcusercontent.com/9e42e1e322845669432401150/_thumbs/530b42f3-02d4-69e2-4873-09d855eb6270.png"
+                            alt="Vietnamese Coffee Beans">
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Vietnamese Coffee Beans</h3>
+                        <p class="article-text">
+                            Only a few of the more than 100 different species of coffee that can be found around the
+                            world are actually suitable for consumption. Arabica and Robusta are the two of them, they
+                            are...
+                        </p>
+                        <a href="https://tlcommodities.com/vietnamese-coffee-locating-arabica-coffee/" target="_blank"
+                            class="article-link">Read Full Report</a>
+                    </div>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="article">
+                    <div class="article-image">
+                        <img src="https://mcusercontent.com/9e42e1e322845669432401150/_thumbs/66757fec-73a9-2caa-168e-471cd4263330.png"
+                            alt="Vietnam Coffee Visible Stock">
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Vietnam Coffee Visible Stock</h3>
+                        <p class="article-text">
+                            Vietnam's coffee stocks at the end of Aug 2024 were 119,136 tons, which was a 25.72%
+                            decrease from the previous month and a 29.27% decrease from the same period last year.
+                        </p>
+                        <a href="https://tlcommodities.com/vietnam-coffee-visible-stocks-sep-2024-2/" target="_blank"
+                            class="article-link">Read Full Report</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <!-- Footer Links -->
+            <div class="footer-links">
+                <a href="mailto:trade@tlcommodities.com" target="_blank" class="footer-link">Email our trade team</a>
+                <a href="https://tlcommodities.com/" target="_blank" class="footer-link">Visit our website</a>
+            </div>
+
+            <!-- Footer Logo -->
+            <div class="footer-logo">
+                <img src="https://mcusercontent.com/9e42e1e322845669432401150/images/ad2aee8b-5a2d-5f9f-990e-ec5477477862.png"
+                    alt="Tuan Loc Commodities">
+            </div>
+
+            <!-- Footer Address -->
+            <div class="footer-address">
+                <p><strong>Tuan Loc Commodities Co., Ltd</strong></p>
+                <p>362/14 Ung Van Khiem Street, Thanh My Tay Ward, HCMC, Vietnam</p>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/tuan-loc-commodities/" target="_blank">
+                    <img src="https://cdn-images.mailchimp.com/icons/social-block-v3/block-icons-v3/linkedin-filled-light-40.png"
+                        alt="LinkedIn">
+                </a>
+                <a href="https://tlcommodities.com/" target="_blank">
+                    <img src="https://cdn-images.mailchimp.com/icons/social-block-v3/block-icons-v3/website-filled-light-40.png"
+                        alt="Website">
+                </a>
+                <a href="mailto:contact@tlcommodities.com" target="_blank">
+                    <img src="https://cdn-images.mailchimp.com/icons/social-block-v3/block-icons-v3/email-filled-light-40.png"
+                        alt="Email">
+                </a>
+            </div>
+
+            <!-- Footer Legal -->
+            <div class="footer-legal">
+                <p>© *|CURRENT_YEAR|* *|LIST:COMPANY|*. All rights reserved.</p>
+                <p>*|IFNOT:ARCHIVE_PAGE|* *|LIST:DESCRIPTION|* *|END:IF|*</p>
+                <p>Our mailing address is: *|HTML:LIST_ADDRESS|*</p>
+                <p>
+                    Want to change how you receive these emails?<br>
+                    You can <a href="*|UPDATE_PROFILE|*" style="color: white;">update your preferences</a> or
+                    <a href="*|UNSUB|*" style="color: white;">unsubscribe</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
